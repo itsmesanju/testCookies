@@ -1,0 +1,45 @@
+syn on
+set nocompatible
+set nobackup            " do not keep a backup file, use versions instead
+set history=500         " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+set showcmd             " display incomplete commands
+set incsearch           " do incremental searching
+
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ \ \ %{getcwd()}\ \ \[%{strftime('%d-%b\ %H:%M')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
+
+set cmdheight=2
+" Configure backspace so it acts as it should act
+"set backspace=eol,start,indent
+set noautoindent
+set ignorecase
+" When searching try to be smart about cases
+set smartcase
+set hlsearch
+" Show matching brackets when text indicator is over them
+set showmatch
+
+syntax enable
+
+set encoding=utf8
+
+" Use Unix as the standard file type
+"set ffs=unix,dos,mac
+set nobackup
+set noswapfile
+set tabstop=4
+"call plug#begin('~/.vim/plugged')
+"Plug 'janko-m/vim-test'
+"call plug#end()
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
