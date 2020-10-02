@@ -1,0 +1,20 @@
+#Write logs to file with color coded output.
+#Call bashLog function with color code from RED, GRB, YLW, BLB or RST to reset. 
+LOG=./debug.log
+function bashLog() {
+echo "$(date '+%Y-%m-%d %H:%M:%S %z') | $$ | $1" >> ${LOG}
+echo "$(date '+%Y-%m-%d %H:%M:%S %z') | $$ | $1"
+}
+
+#
+RED=$(tput setaf 1)
+GRN=$(tput setaf 2)
+YLE=$(tput setaf 3)
+BLU=$(tput setaf 4)
+PNK=$(tput setaf 5)
+CYN=$(tput setaf 6)
+GRY=$(tput setaf 6)
+CYN=$(tput setaf 7)
+RST=$(tput sgr0)
+
+bashLog "${CYN}test sample!${RST}"
