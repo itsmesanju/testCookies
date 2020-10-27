@@ -1,3 +1,4 @@
+#Sanju
 #Write logs to file with color coded output.
 #Call bashLog function with color code from RED, GRB, YLW, BLB or RST to reset. 
 LOG=./debug.log
